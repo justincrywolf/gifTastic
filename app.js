@@ -56,7 +56,6 @@ $(document).on( "click", ".searchImage", function(){
 
 $( "#addSearch" ).on( "click", function(event){
     event.preventDefault();
-    $("#searches").clear();
     var newSearch = $( "input" ).val();
     searchArray.push( newSearch );
     populateButtons( searchArray, "searchButton", "#buttonsArea" );
