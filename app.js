@@ -24,6 +24,7 @@ $(document).on("click", ".searchButton", function(){
         url: queryURL,
         method: "GET"
         }).then(function(response) {
+            $( "#searches" ).empty();
             for ( var i = 0; i < response.data.length; i++ ){
                 var searchDiv = $( "<div class='search-item'>" );
                 var rating = response.data[i].rating;
@@ -38,7 +39,7 @@ $(document).on("click", ".searchButton", function(){
                 image.addClass( "searchImage" );
                 searchDiv.append( p );
                 searchDiv.append( image );
-                $( "#searches" ).append(searchDiv);
+                $( "#searches" ).prepend(searchDiv);
             }
         });
 });
