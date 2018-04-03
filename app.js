@@ -1,3 +1,4 @@
+// hello?
 $(function(){
     populateButtons(searchArray, "searchButton", "#buttonsArea" );
     console.log( "page loaded" );
